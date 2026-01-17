@@ -90,6 +90,12 @@ $commonParams = @{ platform = 'win'; bits = 64; do = 'pipeline' };
 '2008r2','2012','10' | ForEach-Object {.\ChromeDownloader.ps1  @commonParams -osversion $_} | Select platform,osversion,version,url | Format-Table
 ```
 
+Display information for the latest releases of Chrome for Windows XP
+
+```
+.\ChromeDownloader.ps1 win -os 5.2 -b 32 -do info
+```
+
 
 
 
